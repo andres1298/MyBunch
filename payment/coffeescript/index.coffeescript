@@ -1,0 +1,21 @@
+class @CCForm
+  
+  constructor: (@options) -> @init()
+  
+  init: ->
+    @events()
+    
+  events: ->
+    @options.toggle.on 'click', (e) => 
+      e.preventDefault()
+      @flipCard()
+      
+  flipCard: ->
+    @options.container.toggleClass(@options.activeClass)
+
+$ ->
+  ccf = new CCForm({
+    toggle: $('.flip-toggle'),
+    container: $('.flip'),
+    activeClass: 'is-flipped'
+  })

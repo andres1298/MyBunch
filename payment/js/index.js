@@ -1,0 +1,37 @@
+(function() {
+  this.CCForm = class CCForm {
+    constructor(options) {
+      this.options = options;
+      this.init();
+    }
+
+    init() {
+      return this.events();
+    }
+
+    events() {
+      return this.options.toggle.on('click', (e) => {
+        e.preventDefault();
+        return this.flipCard();
+      });
+    }
+
+    flipCard() {
+      return this.options.container.toggleClass(this.options.activeClass);
+    }
+
+  };
+
+  $(function() {
+    var ccf;
+    return ccf = new CCForm({
+      toggle: $('.flip-toggle'),
+      container: $('.flip'),
+      activeClass: 'is-flipped'
+    });
+  });
+
+}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFBTSxJQUFDLENBQUEsU0FBUCxNQUFBLE9BQUE7SUFFRSxXQUFhLFFBQUEsQ0FBQTtNQUFDLElBQUMsQ0FBQTtNQUFZLElBQUMsQ0FBQSxJQUFELENBQUE7SUFBZDs7SUFFYixJQUFNLENBQUEsQ0FBQTthQUNKLElBQUMsQ0FBQSxNQUFELENBQUE7SUFESTs7SUFHTixNQUFRLENBQUEsQ0FBQTthQUNOLElBQUMsQ0FBQSxPQUFPLENBQUMsTUFBTSxDQUFDLEVBQWhCLENBQW1CLE9BQW5CLEVBQTRCLENBQUMsQ0FBRCxDQUFBLEdBQUE7UUFDMUIsQ0FBQyxDQUFDLGNBQUYsQ0FBQTtlQUNBLElBQUMsQ0FBQSxRQUFELENBQUE7TUFGMEIsQ0FBNUI7SUFETTs7SUFLUixRQUFVLENBQUEsQ0FBQTthQUNSLElBQUMsQ0FBQSxPQUFPLENBQUMsU0FBUyxDQUFDLFdBQW5CLENBQStCLElBQUMsQ0FBQSxPQUFPLENBQUMsV0FBeEM7SUFEUTs7RUFaWjs7RUFlQSxDQUFBLENBQUUsUUFBQSxDQUFBLENBQUE7QUFDQSxRQUFBO1dBQUEsR0FBQSxHQUFNLElBQUksTUFBSixDQUFXO01BQ2YsTUFBQSxFQUFRLENBQUEsQ0FBRSxjQUFGLENBRE87TUFFZixTQUFBLEVBQVcsQ0FBQSxDQUFFLE9BQUYsQ0FGSTtNQUdmLFdBQUEsRUFBYTtJQUhFLENBQVg7RUFETixDQUFGO0FBZkEiLCJzb3VyY2VzQ29udGVudCI6WyJjbGFzcyBAQ0NGb3JtXG4gIFxuICBjb25zdHJ1Y3RvcjogKEBvcHRpb25zKSAtPiBAaW5pdCgpXG4gIFxuICBpbml0OiAtPlxuICAgIEBldmVudHMoKVxuICAgIFxuICBldmVudHM6IC0+XG4gICAgQG9wdGlvbnMudG9nZ2xlLm9uICdjbGljaycsIChlKSA9PiBcbiAgICAgIGUucHJldmVudERlZmF1bHQoKVxuICAgICAgQGZsaXBDYXJkKClcbiAgICAgIFxuICBmbGlwQ2FyZDogLT5cbiAgICBAb3B0aW9ucy5jb250YWluZXIudG9nZ2xlQ2xhc3MoQG9wdGlvbnMuYWN0aXZlQ2xhc3MpXG5cbiQgLT5cbiAgY2NmID0gbmV3IENDRm9ybSh7XG4gICAgdG9nZ2xlOiAkKCcuZmxpcC10b2dnbGUnKSxcbiAgICBjb250YWluZXI6ICQoJy5mbGlwJyksXG4gICAgYWN0aXZlQ2xhc3M6ICdpcy1mbGlwcGVkJ1xuICB9KSJdfQ==
+//# sourceURL=coffeescript

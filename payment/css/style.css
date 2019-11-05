@@ -1,0 +1,235 @@
+html {
+  background: #34495e;
+  height: 100%;
+}
+
+body {
+  color: #636365;
+  font-size: 16px;
+  padding: 50px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.l-block {
+  display: block;
+}
+
+.l-space {
+  margin-bottom: 20px;
+}
+
+.flip {
+  margin: 0 auto;
+}
+
+.creditCard {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  height: 300px;
+  padding: 20px;
+  position: relative;
+  width: 500px;
+}
+
+.creditCard--back {
+  background: #1A298F;
+}
+
+.creditCard--glossy .creditCard-header {
+  position: relative;
+}
+.creditCard--glossy .creditCard-header::before {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 30px;
+  left: 0;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.creditCard-close {
+  background: #10161c;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  height: 40px;
+  left: -10px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: -10px;
+  width: 40px;
+}
+.creditCard-close:hover {
+  background: #22303d;
+}
+
+.creditCard-field {
+  margin-bottom: 20px;
+}
+.creditCard-field:last-child {
+  margin-bottom: 0;
+}
+
+.has-creditCard-field-help {
+  position: relative;
+}
+
+.creditCard-field-help {
+  background: #999;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  right: 5px;
+  text-align: center;
+  text-decoration: none;
+  bottom: 10px;
+  width: 20px;
+}
+.creditCard-field-help:hover {
+  background: #636365;
+}
+
+.creditCard-header {
+  background: #5FB531;
+  margin: 0 -20px 20px;
+  overflow: auto;
+  padding: 5px;
+}
+
+.creditCard-header--fixed {
+  height: 30px;
+  margin-bottom: 40px;
+}
+
+.creditCard-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font: 16px sans-serif;
+  padding: 10px;
+  width: 100%;
+}
+
+.creditCard-input--fixed {
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  font-weight: bold;
+  height: 36px;
+  position: relative;
+  text-align: right;
+}
+
+.creditCard-highlight {
+  background: rgba(255, 0, 0, 0.3);
+  border: 5px solid red;
+  border-radius: 50%;
+  padding: 10px 25px;
+  position: absolute;
+  right: -5px;
+  top: 4px;
+}
+
+.creditCard-label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.creditCard-select {
+  margin-top: 10px;
+}
+
+.creditCard-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 13px 0 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+.creditCard-types {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.creditCard-type {
+  display: inline;
+  margin-right: 5px;
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+.creditCard-type:last-child {
+  margin-right: 0;
+}
+
+.flip {
+  -moz-perspective: 500px;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  height: 300px;
+  width: 500px;
+}
+
+.is-flipped .flip-inner {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-inner {
+  height: 100%;
+  position: relative;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-content {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.flip-content--front {
+  z-index: 2;
+}
+
+.flip-content--back {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}

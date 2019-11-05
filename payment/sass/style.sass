@@ -1,0 +1,266 @@
+@import compass
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+$base-background: #34495e
+
+html
+  background: $base-background
+  height: 100%
+
+body
+  color: #636365
+  font-size: 16px
+  padding: 50px
+  
+ul 
+  margin: 0
+  padding: 0
+  li
+    list-style-type: none
+      
+p
+  margin: 0
+  padding: 0
+  
+.l-block
+  display: block
+      
+.l-space
+  margin-bottom: 20px
+  
+.flip
+  margin: 0 auto
+  
+// *************************************
+//
+//   Credit Card
+//   -> Credit card form module.
+//
+// *************************************
+  
+$creditCard-background: #fff
+$creditCard-border: 1px solid #ccc
+$creditCard-borderRadius: 10px
+$creditCard-boxShadow: 0 1px 2px rgba(#000, 0.45)
+$creditCard-fontFamily: sans-serif
+$creditCard-fontSize: 16px
+$creditCard-height: 300px
+$creditCard-padding: 20px
+$creditCard-textShadow: 0 1px 2px rgba(#000, 0.75)
+$creditCard-whitespace: 20px
+$creditCard-width: 500px
+
+$creditCard-input-borderColor: #ccc
+  
+.creditCard
+  background: $creditCard-background
+  border-radius: $creditCard-borderRadius
+  box-shadow: $creditCard-boxShadow
+  height: $creditCard-height
+  padding: $creditCard-padding
+  position: relative
+  width: $creditCard-width
+  
+// -------------------------------------
+//   Modifiers
+// -------------------------------------
+
+// ----- Back ----- //
+
+.creditCard--back
+  background: lighten($base-background, 7%)
+
+// ----- Glossy ----- //
+
+.creditCard--glossy
+  
+  .creditCard-header
+    position: relative
+    &::before
+      background: #fff
+      content: ""
+      display: block
+      height: 30px
+      left: 0
+      opacity: 0.1
+      position: absolute
+      top: 0
+      width: 100%
+  
+// -------------------------------------
+//   Submodules
+// -------------------------------------
+
+// ----- Close ----- //
+
+.creditCard-close
+  $size: 40px
+  background: darken($base-background, 20%)
+  border: 2px solid #fff
+  border-radius: 50%
+  color: #fff
+  display: block
+  height: $size
+  left: -10px
+  line-height: $size
+  position: absolute
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+  top: -10px
+  width: $size
+  &:hover
+    background: darken($base-background, 10%)
+
+// ----- Field ----- //
+  
+.creditCard-field
+  margin-bottom: $creditCard-whitespace
+  &:last-child
+    margin-bottom: 0
+    
+// Context
+
+.has-creditCard-field-help
+  position: relative
+    
+// Help
+    
+.creditCard-field-help
+  $size: 20px
+  background: #999
+  border-radius: 50%
+  color: #fff
+  display: block
+  height: $size
+  line-height: $size
+  position: absolute
+  right: 5px
+  text-align: center
+  text-decoration: none
+  bottom: 10px
+  width: $size
+  &:hover
+    background: #636365
+    
+// ----- Header ----- //
+    
+.creditCard-header
+  background: $base-background
+  margin: 0 -20px 20px
+  overflow: auto
+  padding: 5px
+  
+.creditCard-header--fixed
+  height: 30px
+  margin-bottom: 40px
+  
+// ----- Input ----- //
+    
+.creditCard-input
+  border: $creditCard-border
+  border-radius: ($creditCard-borderRadius / 2)
+  box-sizing: border-box
+  font: $creditCard-fontSize $creditCard-fontFamily
+  padding: ($creditCard-padding / 2)
+  width: 100%
+  
+.creditCard-input--fixed
+  background: #fff
+  border: 0
+  border-radius: 0
+  font-weight: bold
+  height: 36px
+  position: relative
+  text-align: right
+    
+// ----- Highlight ----- //
+
+.creditCard-highlight
+  background: rgba(red, 0.3)
+  border: 5px solid red
+  border-radius: 50%
+  padding: 10px 25px
+  position: absolute
+  right: -5px
+  top: 4px
+  
+// ----- Label ----- //
+    
+.creditCard-label
+  display: block
+  font-size: 12px
+  font-weight: bold
+  margin-bottom: 5px
+  text-transform: uppercase
+    
+// ----- Select ----- //
+  
+.creditCard-select
+  margin-top: ($creditCard-whitespace / 2)
+  
+// ----- Title ----- //
+  
+.creditCard-title
+  color: #fff
+  font-size: 20px
+  font-weight: normal
+  margin: 13px 0 0
+  text-shadow: $creditCard-textShadow
+  
+// ----- Types ----- //
+  
+.creditCard-types
+  margin-top: 5px
+  text-align: right
+  
+// Item
+    
+.creditCard-type
+  display: inline
+  margin-right: 5px
+  -webkit-filter: drop-shadow($creditCard-boxShadow)
+  &:last-child
+    margin-right: 0
+    
+// *************************************
+//
+//   Flip
+//
+// *************************************
+
+.flip
+  +perspective(500px)
+  height: $creditCard-height
+  width: $creditCard-width
+  
+.is-flipped
+  
+  .flip-inner
+    +transform(rotateY(180deg))
+  
+.flip-inner
+  height: 100%
+  position: relative
+  -webkit-transition: 0.6s
+  transition: 0.6s
+  -webkit-transform-style: preserve-3d
+  -moz-transform-style: preserve-3d
+  transform-style: preserve-3d
+    
+.flip-content
+  +backface-visibility(hidden)
+  bottom: 0
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+  
+.flip-content--front
+  z-index: 2
+  
+.flip-content--back
+  +transform(rotateY(180deg))

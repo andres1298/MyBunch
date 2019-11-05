@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Pago</title>
+  
+    <link rel="stylesheet" href="css/othercss.css">
+
+  <link rel='stylesheet prefetch' href='css/https___rawgithub_com_mvc.css'>
+<link rel='stylesheet prefetch' href='css/https___rawgithub_com_mvc.css'>
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html {
+  background: #e8e8e8;
+  height: 100%;
+}
+
+body {
+  color: #636365;
+  font-size: 16px;
+  padding: 50px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.l-block {
+  display: block;
+}
+
+.l-space {
+  margin-bottom: 20px;
+}
+
+.flip {
+  margin: 0 auto;
+}
+
+.creditCard {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  height: 300px;
+  padding: 20px;
+  position: relative;
+  width: 500px;
+}
+
+.creditCard--back {
+  background: #1A298F;
+}
+
+.creditCard--glossy .creditCard-header {
+  position: relative;
+}
+.creditCard--glossy .creditCard-header::before {
+  background: #fff;
+  content: "";
+  display: block;
+  height: 30px;
+  left: 0;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.creditCard-close {
+  background: #10161c;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  height: 40px;
+  left: -10px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: -10px;
+  width: 40px;
+}
+.creditCard-close:hover {
+  background: #22303d;
+}
+
+.creditCard-field {
+  margin-bottom: 20px;
+}
+.creditCard-field:last-child {
+  margin-bottom: 0;
+}
+
+.has-creditCard-field-help {
+  position: relative;
+}
+
+.creditCard-field-help {
+  background: #999;
+  border-radius: 50%;
+  color: #fff;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  right: 5px;
+  text-align: center;
+  text-decoration: none;
+  bottom: 10px;
+  width: 20px;
+}
+.creditCard-field-help:hover {
+  background: #636365;
+}
+
+.creditCard-header {
+  background: #5FB531;
+  margin: 0 -20px 20px;
+  overflow: auto;
+  padding: 5px;
+}
+
+.creditCard-header--fixed {
+  height: 30px;
+  margin-bottom: 40px;
+}
+
+.creditCard-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font: 16px sans-serif;
+  padding: 10px;
+  width: 100%;
+}
+
+.creditCard-input--fixed {
+  background: #fff;
+  border: 0;
+  border-radius: 0;
+  font-weight: bold;
+  height: 36px;
+  position: relative;
+  text-align: right;
+}
+
+.creditCard-highlight {
+  background: rgba(255, 0, 0, 0.3);
+  border: 5px solid red;
+  border-radius: 50%;
+  padding: 10px 25px;
+  position: absolute;
+  right: -5px;
+  top: 4px;
+}
+
+.creditCard-label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.creditCard-select {
+  margin-top: 10px;
+}
+
+.creditCard-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 13px 0 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+.creditCard-types {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.creditCard-type {
+  display: inline;
+  margin-right: 5px;
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+.creditCard-type:last-child {
+  margin-right: 0;
+}
+
+.flip {
+  -moz-perspective: 500px;
+  -webkit-perspective: 500px;
+  perspective: 500px;
+  height: 300px;
+  width: 500px;
+}
+
+.is-flipped .flip-inner {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flip-inner {
+  height: 100%;
+  position: relative;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flip-content {
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.flip-content--front {
+  z-index: 2;
+}
+
+.flip-content--back {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+    </style>
+
+    <script src="js/js.js"></script>
+
+</head>
+
+<body>
+
+  <form action=''>
+  <div class='flip'>
+    <div class='flip-inner'>
+      <div class='flip-content flip-content--front'>
+        <div class='creditCard'>
+          <div class='grid creditCard-header'>
+            <div class='grid-box grid-box--1of3'>
+              <h3 class='creditCard-title'>Pago MyBunch</h3>
+            </div>
+            <div class='grid-box grid-box--2of3'>
+              <ul class='creditCard-types'>
+                <li class='creditCard-type'>
+                  <img alt='' src='https://s.cdpn.io/5734/visa.png'>
+                </li>
+                <li class='creditCard-type'>
+                  <img alt='' src='https://s.cdpn.io/5734/mastercard.png'>
+                </li>
+                <li class='creditCard-type'>
+                  <img alt='' src='https://s.cdpn.io/5734/american-express.png'>
+                </li>
+                <li class='creditCard-type'>
+                  <img alt='' src='https://s.cdpn.io/5734/discover.png'>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class='creditCard-field'>
+            <label class='creditCard-label' for='name'>Nombre de la  Tarjeta</label>
+            <input class='creditCard-input is-required' name='name' placeholder='Carlos Espinoza' type='text'>
+          </div>
+          <div class='grid l-space'>
+            <div class='grid-box grid-box--3of4'>
+              <div class='creditCard-field'>
+                <label class='creditCard-label' for='number'>Número de Tarjeta</label>
+                <input class='creditCard-input is-required' name='number' placeholder='0000 0000 0000 0000' type='text'>
+              </div>
+            </div>
+            <div class='grid-box grid-box--1of4'>
+              <div style="margin-top:8px;" class='creditCard-field has-creditCard-field-help'>
+                <label class='creditCard-label' for='cvv'>
+                  Código (CVV)
+                  <a class='creditCard-field-help flip-toggle' href='#'>?</a>
+                </label>
+                <input class='creditCard-input is-required' name='code' placeholder='123' type='text'>
+              </div>
+                 <button onclick="payment()" type="button" style="margin-left:200px; height:40px; width: 100px;">Enviar</button>
+            </div>
+          </div>
+            
+           
+         
+        </div>
+      </div>
+      <div class='flip-content flip-content--back'>
+        <div class='creditCard creditCard--back'>
+          <a class='l-block l-space creditCard-close flip-toggle' href='#'>x</a>
+          <div class='creditCard-header creditCard-header--fixed'></div>
+          <div class='creditCard-input creditCard-input--fixed'>
+            <span class='c-right'>123</span>
+            <em class='creditCard-highlight'></em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+  <script src='js/jq.js'></script>
+    <script  src="js/index.js"></script>
+    
+    <script>
+        
+        function payment(){
+            alert('Pago Realizado'); 
+            location.href = 'http://localhost/MyBunch/carrito.php';
+        }
+        
+    </script>
+
+
+
+
+</body>
+
+</html>
